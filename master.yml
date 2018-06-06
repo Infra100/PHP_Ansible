@@ -1,0 +1,22 @@
+---
+
+# Updating machine & Installing chrony
+# ------------------------------------
+- hosts: server1
+  gather_facts: False
+  remote_user: ubuntu
+  sudo: yes
+  roles:
+    - roles/PHP
+
+# Installing & Configuring Elasticsearch
+#---------------------------------------
+
+- hosts: server2
+  gather_facts: False
+  remote_user: ubuntu
+  sudo: yes
+  roles:
+    - roles/PHP
+
+
